@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%!
+// 디클러레이션 ﻿﻿: 클래스 선언, 메소드 선언할 수 있다.
+// test_jsp.java ﻿→ 클래스 이름 바뀐다.
+// 프로젝트를 배포하는 서버마다 클래스이름의 명명규칙이 다르다???
+// 나는 코린인데~ 우리가 인스턴스화 한다?!?! 
+// 넌 초보니까 인스턴스화 하지 말아라 ﻿→ 메모리 관리 책임은 스프링이 책임진다.
+// 자원관리를 프레임워크에게 맡긴다.
+// 클래스 이름은 누가 결정해야 할까? ﻿→ 업무를 구현할 개발자가 결정한다.
+// IOC : 제어역전이다.
+// 단독적으로 인스턴스화가 불가능하다.
+//
+	class Sonata {
+}
+%>
+<%
+	Sonata myCar = new Sonata(); // 여기서는 scope를 줄 수가 없잖아요~!!!
+	out.print(myCar);
+	// 4월에는 ﻿→ 로컬pc 사용했었음
+	// 현재 : 웹서버(Web Application Server <﻿﻿-> Web Server(정적페이지) )
+	// 웹서버 중요한 것 : 유지 ﻿→ scope ( page | request | session | application)
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:useBean id="himCar" scope="request" class="com.spring4.mvc.Sonata"/>
+</body>
+</html>

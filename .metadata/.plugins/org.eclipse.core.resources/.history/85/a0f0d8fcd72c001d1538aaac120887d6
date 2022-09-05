@@ -1,0 +1,18 @@
+package com.spring4.mvc;
+
+public class SonataSimulation {
+	// 게이른 인스턴스화
+	Sonata myCar = null; // 언제 초기화가 되나?
+	// 이른 인스턴스화
+	Sonata herCar = new Sonata();
+	void methodA() {
+		myCar = new Sonata();
+		System.out.println(herCar.speed);
+		//System.out.println(myCar.speed);
+		
+	}
+	public static void main(String[] args) {
+		SonataSimulation ss = new SonataSimulation();
+		ss.methodA();
+	}
+}

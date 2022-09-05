@@ -1,0 +1,12 @@
+package com.spring4.mvc;
+
+public class SonataSimulation {
+	Sonata myCar = null;
+	Sonata herCar = new Sonata();
+	void mehthodA() {
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}
