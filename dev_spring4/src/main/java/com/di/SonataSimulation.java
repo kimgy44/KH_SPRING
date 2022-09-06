@@ -10,15 +10,15 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.InputStreamResource;
 /*
  * spring-core.jar → XXX.class → main() 있나?
+ * < 스프링 컨테이너 종류 - 2가지 >
  * spring-context.jar - ApplicationContext
  * spring-beans.jar - BeanFactory
  * 생성해야하는 클래스명은 누가 결정해야하나?
- * 
  */
 public class SonataSimulation {
 
 	public static void main(String[] args) throws Exception {
-		//객체 생성
+		// 객체 생성
 		// 개발자가 라이프 사이클 관리하기 → 왜냐하면 직접 new를 사용해서 인스턴스화를 함
 		// 스프링으로부터 빈(bean:클래스임)을 관리받지 않은 코드임
 		// 스프링으로 객체의 라이프사이클을 관리 받으려면 xml문서에 등록하거나

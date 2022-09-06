@@ -1,0 +1,14 @@
+package com.spring4.mvc;
+
+import org.apache.log4j.Logger;
+
+import com.vo.MemberVO;
+
+public class AuthLogic {
+	Logger logger = Logger.getLogger(AuthController.class);
+
+	public MemberVO login() {
+		logger.info("login 호출 성공");
+		return null;
+	}
+}

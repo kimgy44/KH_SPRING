@@ -1,0 +1,7 @@
+
+9월 06, 2022 20:36:10.850 NEW SESSION
+9월 06, 2022 20:36:10.850 [12716:6368:0906/203610.848:ERROR:device_event_log_impl.cc(214)] [20:36:10.848] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: �ý��ۿ� ������ ��ġ�� �۵����� �ʽ��ϴ�. (0x1F)
+9월 06, 2022 20:36:10.854 [12716:6368:0906/203610.854:ERROR:device_event_log_impl.cc(214)] [20:36:10.854] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: �ý��ۿ� ������ ��ġ�� �۵����� �ʽ��ϴ�. (0x1F)
+9월 06, 2022 20:36:10.855 [12716:6368:0906/203610.854:ERROR:device_event_log_impl.cc(214)] [20:36:10.854] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: �ý��ۿ� ������ ��ġ�� �۵����� �ʽ��ϴ�. (0x1F)
+9월 06, 2022 20:37:08.581 [12716:1728:0906/203708.580:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+9월 06, 2022 20:46:09.455 [12716:6368:0906/204609.454:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost

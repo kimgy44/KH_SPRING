@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="memberMapper">
+   <resultMap id="memvoMap" type="com.vo.MemberVO"></resultMap>
+   <select id="login" resultType="com.vo.MemberVO" parameterType="map">
+      SELECT mem_name, mem_id
+        FROM member
+      <where>
+         <if test="mem_id!=null">
+            AND mem_id = #{mem_id}
+         </if>
+         <if test="mem_pw!=nul">
+            AND mem_pw = #{mem_pw}
+         </if>
+      </where>
+   </select>
+</mapper>

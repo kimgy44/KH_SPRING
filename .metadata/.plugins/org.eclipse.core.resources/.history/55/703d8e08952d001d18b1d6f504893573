@@ -1,0 +1,8 @@
+package com.spring4.mvc;
+
+import org.apache.log4j.Logger;
+
+public class AuthDao {
+	Logger logger = Logger.getLogger(AuthController.class);
+	
+}

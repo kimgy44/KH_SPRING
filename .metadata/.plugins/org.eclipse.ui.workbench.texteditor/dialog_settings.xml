@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ervletContext"/>
 			<item value="&#x09;&#x09;System.out.println(myCar.speed);"/>
 			<item value="snap"/>
 			<item value="maven"/>
