@@ -5,7 +5,19 @@
 	
 	<bean id="default-handler-mapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 	
+	<bean name="/di/insaList.sp" class="com.di.ListController">
+	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
+ 		<property name ="insaBean"> 
+			<list>
+				<value> (●'◡'●) </value>
+				<value> Have a nice day~!! </value>
+				<value> ﻿o(=•ェ•=)m Bye~Bye~*★* </value>
+			</list>
+		</property>
+	</bean>
+	
 	<bean name="/di/myCar.sp" class="com.di.Pride"/>
+	
 	<bean name="/myCar.sp" class="com.spring4.mvc.Sonata"/>
 	<!-- <bean name ="/di/hello.sp" class="com.spring4.mvc.HelloController"/> -->
 	
@@ -35,7 +47,7 @@
 			</props>
 		</property>
 	</bean>	
-	
+	<!-- ModelAndView 사용시 배포 위치에 대한 선언 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />

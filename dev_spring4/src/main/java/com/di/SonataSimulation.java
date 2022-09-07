@@ -31,15 +31,23 @@ public class SonataSimulation {
 		// 자신들의 속내용이나 코드가 노출되지 않도록..
 		// myBatis는 프레임워크인가? vs 라이브러리인가?
 		Sonata yourCar = new Sonata(); // 여기의 주소번지와
+		System.out.println(yourCar);  // pojo : com.di.Sonata@71c7db30   → 프로토타입!!!!
 		//객체 소멸
 		yourCar = null;//candidate상태로 전환되는코드임.  //null로 초기화 한후에 
 		yourCar = new Sonata(); // 다시 인스턴스화 → 새로 주소번지 채번이 된다.
+		System.out.println(yourCar);   // com.di.Sonata@19bb089b → 프로토타입!!!!
 		// yourCar == yourCar => false
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("com\\di\\sonataBean.xml");
 		// scope를 생략한 경우
 		// <bean id ="myCar" class="com.di.Sonata"/>
 		Sonata myCar = (Sonata)context.getBean("myCar");
+		System.out.println(myCar);  // com.di.Sonata@4659191b  → 싱글톤!!!!!!!!
+		
+		myCar = null; // 왜 역할이 없지 ???? (연결고리 끊기)
+		myCar = (Sonata)context.getBean("myCar");
+		System.out.println(myCar);   // com.di.Sonata@4659191b   → 싱글톤 !!!!!!!!
+		
 		Sonata myCar2 = (Sonata)context.getBean("myCar");
 		System.out.println(myCar == myCar2);// true : 싱글톤
 		// scope를 prototype으로 한 경우

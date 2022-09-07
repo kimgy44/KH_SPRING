@@ -1,0 +1,18 @@
+package com.chap2;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+// 스프링 컨테이너가 관리를 하는 클래스 임
+// 객체주입을 위한 사전 조치, 추가해야 할 코드
+//@Configuration
+public class AppContext {
+   //@Bean
+   public DeptVO getDeptVO() {
+      DeptVO dVO = new DeptVO();
+      dVO.setDeptno(10);
+      dVO.setDname("개발부");
+      dVO.setLoc("서울");
+      return dVO;
+   }
+}
+

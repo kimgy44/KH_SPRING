@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/cos-05Nov2002.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mybatis-spring-2.0.6.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-tx-4.3.30.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

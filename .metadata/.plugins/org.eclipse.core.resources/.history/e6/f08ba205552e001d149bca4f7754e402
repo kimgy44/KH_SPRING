@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인사 목록입니다(객체를 spring-servlet.xml에서 가져옵니다)</title>
+</head>
+<body>
+
+</body>
+</html>
