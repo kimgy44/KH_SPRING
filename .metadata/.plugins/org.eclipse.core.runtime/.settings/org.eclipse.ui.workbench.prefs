@@ -1,7 +1,10 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
 //org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.compare.contentmergeviewer.TextMergeViewer\tTorg.eclipse.ui.presentation.default\tTorg.eclipse.mylyn.wikitext.ui.presentation
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.mylyn.wikitext.ui.presentation.textFont
 PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
 eclipse.preferences.version=1
+org.eclipse.mylyn.wikitext.ui.presentation.textFont=1|\uB9D1\uC740 \uACE0\uB515|9.0|1|WINDOWS|1|-18|0|0|0|700|0|0|0|-127|3|2|1|50|\uB9D1\uC740 \uACE0\uB515;
 org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=255,255,255
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=255,255,255

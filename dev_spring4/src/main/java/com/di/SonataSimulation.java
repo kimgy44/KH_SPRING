@@ -41,11 +41,11 @@ public class SonataSimulation {
 		// <bean id ="myCar" class="com.di.Sonata"/>
 		Sonata myCar = (Sonata)context.getBean("myCar");
 		Sonata myCar2 = (Sonata)context.getBean("myCar");
-		System.out.println(myCar == myCar2);// true : 싱글톤 
+		System.out.println(myCar == myCar2);// true : 싱글톤
 		// scope를 prototype으로 한 경우
 		Sonata himCar = (Sonata)context.getBean("himCar");
 		Sonata himCar2 = (Sonata)context.getBean("himCar");
-		System.out.println(himCar == himCar2);// true : 싱글톤 , false :prototype
+		System.out.println(himCar == himCar2);// false :prototype
 		BeanFactory factory = 
 				new XmlBeanFactory(new ClassPathResource("com\\di\\sonataBean.xml"));
 		Sonata meCar = (Sonata)factory.getBean("myCar");
