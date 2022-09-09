@@ -15,6 +15,25 @@
 			</list>
 		</property>
 	</bean>
+<bean name="/di/insaMap.sp" class="com.di.MapController">
+	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
+ 		<property name ="insaMsg"> 
+			<map>
+				<entry>
+					<key><value>one</value></key>
+					<value>안녕(✿◕‿◕✿)</value>
+				</entry>
+				<entry>
+					<key><value>two</value></key>
+					<value>ฅʕ•̫͡•ʔฅ굿모닝ฅʕ•̫͡•ʔฅ</value>
+				</entry>
+				<entry>
+					<key><value>three</value></key>
+					<value>졸령(˘･_･˘)</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
 	
 	<bean name="/di/myCar.sp" class="com.di.Pride"/>
 	

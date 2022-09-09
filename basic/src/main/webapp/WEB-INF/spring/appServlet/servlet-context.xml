@@ -20,16 +20,15 @@
 		실행문;
 		return "getDeptList";
 	}
-	/WEB-INF/views/??????.jsp
-	
+	/WEB-INF/views/?????.jsp
 	-->
-	
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
 	<context:component-scan base-package="com.basic.step1" />
+	<context:component-scan base-package="com.mvc.kh" />
 	
 	
 	
