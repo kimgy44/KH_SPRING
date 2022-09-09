@@ -1,5 +1,0 @@
-package com.basic.step1;
-@AuthController
-public class AuthCotroller {
-
-}
