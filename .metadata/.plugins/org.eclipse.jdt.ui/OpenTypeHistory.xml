@@ -3,5 +3,5 @@
     <typeInfo handle="=dev_spring4/C:\/KH-SPRING\/dev_spring4\/src\/main\/webapp\/WEB-INF\/lib\/spring-webmvc-4.3.30.RELEASE.jar&lt;org.springframework.web.servlet.mvc.multiaction(MultiActionController.class[MultiActionController" modifiers="1048609" timestamp="1662082780891"/>
     <typeInfo handle="=dev_spring4/C:\/KH-SPRING\/dev_spring4\/src\/main\/webapp\/WEB-INF\/lib\/spring-webmvc-4.3.30.RELEASE.jar&lt;org.springframework.web.servlet.mvc(AbstractController.class[AbstractController" modifiers="1057" timestamp="1662082780891"/>
     <typeInfo handle="=dev_spring4/C:\/Program Files\/Java\/jdk-11.0.10\/lib\/jrt-fs.jar`jdk.internal.vm.compiler=/module=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;org.graalvm.compiler.core.common.cfg(AbstractControlFlowGraph.class[AbstractControlFlowGraph" modifiers="1537" timestamp="1660646631225"/>
-    <typeInfo handle="=dev_spring4/src\/main\/java&lt;com.di{HelloBean.java[HelloBean" modifiers="513" timestamp="1662604945609"/>
+    <typeInfo handle="=dev_spring4/src\/main\/java&lt;com.di{HelloBean.java[HelloBean" modifiers="513" timestamp="1662734959894"/>
 </typeInfoHistroy>
