@@ -7,6 +7,6 @@
 <title>testList[WEB-INF]</title>
 </head>
 <body>
-testList.jsp 페이지
+testList.jsp 페이지입니다.
 </body>
 </html>
