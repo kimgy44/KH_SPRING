@@ -39,6 +39,7 @@ public class BoardDao {
 			// insert here
 			logger.info(result+"");
 		} catch (Exception e) {
+			logger.info("Exception : "+e.toString());
 		} 
 		return result;
 	}/////////////// end of getBNo
@@ -111,4 +112,19 @@ public class BoardDao {
 		 }
 		 return result;
 	}
+
+	public int boardSInsert(Map<String, Object> pMap) {
+		int result = 0;
+		try {
+			// 현재는 첨부파일이 한개인 경우라서 상수처리함
+			// TODO → 멀티처리를 위해서는 무엇을 해야 할까??
+			pMap.put("bs_seq", 1);
+			result = sqlSessionTemplate.update("boardSInsert",pMap);
+			logger.info("result : "+result);
+		} catch (Exception e) {
+			logger.info("Exception : "+e.toString());
+		} 	
+		return result;
+	}
+	
 }

@@ -45,6 +45,7 @@
 			<property name="mappings">
 				<props>
 					<prop key="/login.sp">auth-controller</prop>
+					<prop key="/doEmp.sp">emp-controller</prop>
 				</props>
 			</property>
 	</bean>	
@@ -55,10 +56,8 @@
 		<property name="authLogic" ref="auth-logic"/>
   	</bean>
      
-     
 	
 	<!-- ========== xml에서 bean태그에 클래스 선엄함. AuthController auth-controller = null; ==========  -->	
- 
 	<bean id="auth-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
 		<property name="mappings">
 			<props>
@@ -66,6 +65,23 @@
 			</props>
 		</property>
 	</bean>	
+	
+	
+	<bean name="emp-controller" class="com.spring4.tr.EmpController">
+ 		<property name ="methodNameResolver" ref="emp-resolver" /> 
+	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
+ 		<property name ="empLogic" ref="emp-Logic"/> 
+	</bean>
+	
+	<bean name="emp-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/doEmp.sp">doEmp</prop>
+			</props>
+		</property>	
+	</bean>
+	
+	
 	<!-- ModelAndView 사용시 배포 위치에 대한 선언 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

@@ -17,8 +17,12 @@
 			<value>tiger</value>
 		</property>
 	</bean>
-	
-   <!-- ============[[ Spring & MyBatis]] =============== -->
+   <!-- ============[[ Spring & TransactionManager ]] =============== -->
+   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="data-source-target"/>
+   </bean>
+   
+   <!-- ============[[ Spring & MyBatis ]] =============== -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation" value="WEB-INF/mybatis-config.xml" />
 		<property name="dataSource" ref="data-source-target" />
@@ -31,10 +35,15 @@
   	<bean id="auth-dao" class="com.spring4.mvc.AuthDao">
   		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"></property>
   	</bean>
+  	<bean id="emp-dao" class="com.spring4.tr.EmpDao">
+  		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"></property>
+  	</bean>
+  	<bean id="dept-dao" class="com.spring4.tr.DeptDao">
+  		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"></property>
+  	</bean>
 	
 </beans>
 <!-- 
-   spring-jdbc.jar를 매번 다운로드 받고 WEB-INF - lib에 배포해야하는건가?
-   매번? 불편하고 귀찮아ㅡ,ㅡ......
-   또 클래스간에 의존관계도 파악해서 넣어야 하는데 어떤거랑 의존관계가 있는지 일일이 파악하고 결정해서 넣어야 한다고?
- -->
+	spring-jdbc.jar를 매번 이런식으로 다운로드 받고 WEB-INF아래 lib에 매번 배포해야되나요?
+   또 클래스 간에 의존관계도 파악해서 넣어야 하는데.. 어떤 애랑 의존관계가 있는지 일일히 파악하고 결정해서 넣어야하나요?
+-->

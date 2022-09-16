@@ -37,18 +37,17 @@
    		<constructor-arg ref="hikariConfig"/>
    </bean>
    <!-- ====================== [[ Spring & MyBatis 시작 ]] ====================== -->
-   <bean id="sqlSessionFactory"
-      class="org.mybatis.spring.SqlSessionFactoryBean">
-      <property name="configLocation"
-         value="WEB-INF/mybatis-config.xml" />
+   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="configLocation" value="WEB-INF/mybatis-config.xml" />
       <property name="dataSource" ref="dataSource" />
    </bean>
-   <bean id="sqlSessionTemplate"
-      class="org.mybatis.spring.SqlSessionTemplate">
+   
+   <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
       <constructor-arg index="0" ref="sqlSessionFactory" />
    </bean>
    <!-- ====================== [[ Spring & MyBatis 끝 ]] ====================== -->
 </beans>
-<!-- spring-jdbc.jar를 매번 이런식으로 다운로드 받고 WEB-INF아래 lib에 배포해야하는건가??..매번...? 
-   또 클래스 간에 의존관계도 파악해서 넣어야 한다는데.... 어떤 애랑 어떤거랑 의존관계가 있는지 일일이 내가 파악하고 결정해서 넣어야 
-   한다구요???? -->
+<!-- 
+	spring-jdbc.jar를 매번 이런식으로 다운로드 받고 WEB-INF아래 lib에 매번 배포해야되나요?
+   또 클래스 간에 의존관계도 파악해서 넣어야 하는데.. 어떤 애랑 의존관계가 있는지 일일히 파악하고 결정해서 넣어야하나요?
+-->

@@ -9,11 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.basic.step1.dao.BoardDao;
+
 @Service
 public class BoardLogic {
 	Logger logger = LoggerFactory.getLogger(BoardLogic.class);
 	@Autowired(required=false)
-	public List<Map<String,Object>> boardetail(Map<String, Object> pMap){
+	private BoardDao boardDao = null;
+	// 로직에서는 그대로 모두 사용함 ﻿→ RequestParam이나 RequestMapping, Model 모두 필요없음
+	// 공통된 관심사는 트랜잭션 처리 ﻿→ 하나의 메서드에서 Dao에 두개 메서드 호출이 필요함
+	// board_master_t, board_sub_t
+	public List<Map<String,Object>> boardDetail(Map<String, Object> pMap){
 		logger.info("boardDetail 호출 성공");
 		List<Map<String,Object>> boardList = null;
 		boardList = boardDao.boardList(pMap);
@@ -22,12 +27,6 @@ public class BoardLogic {
 		}
 		return boardList; 
 	}
-	@Autowired(required=false)
-	private BoardDao boardDao = null;
-	// 로직에서는 그대로 모두 사용함 ﻿→ RequestParam이나 RequestMapping, Model 모두 필요없음
-	// 공통된 관심사는 트랜잭션 처리 ﻿→ 하나의 메서드에서 Dao에 두개 메서드 호출이 필요함
-	// board_master_t, board_sub_t
-	
 	public List<Map<String,Object>> boardList(Map<String, Object> pMap){
 		logger.info("boardList 호출 성공");
 		List<Map<String,Object>> boardList = null;
@@ -67,10 +66,10 @@ public class BoardLogic {
 		result = boardDao.boardMInsert(pMap);// 새글쓰기, 댓글쓰기 동시
 		//첨부파일이 있는 경우에만 board_sub_t 추가함
 		//첨부 파일이 있니?
-		if(pMap.get("bs_file")!=null && pMap.get("bs_file").toString().length()>1) {
+		if(pMap.get("b_file")!=null && pMap.get("b_file").toString().length()>1) {
 			pMap.put("b_no", b_no);
 			pMap.put("bs_seq", 1);
-//			int result2 = boardDao.boardSInsert(pMap);
+			int result2 = boardDao.boardSInsert(pMap);
 //			logger.info("result2가 1이면 등록 성공===> "+result2);
 		}
 		return result;
@@ -85,14 +84,5 @@ public class BoardLogic {
 		result = boardDao.boardMDelete(pMap);
 		return result;
 	}
-	public List<Map<String,Object>> boardDetail(Map<String,Object> pMap){
-		logger.info("boardDetail 호출 성공");
-		List<Map<String,Object>> boardList = null;
-		boardList = boardDao.boardList(pMap);
-		// 상세조회를 한 번 눌러서 조회할 때마다 조회수를 1씩 증가해주세요
-		if(boardList!=null && boardList.size()==1) {
-			boardDao.hitCount(pMap);
-		}
-		return boardList;
-	}
+
 }
