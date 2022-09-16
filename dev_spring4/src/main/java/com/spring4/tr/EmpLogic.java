@@ -23,10 +23,10 @@ public class EmpLogic {
 		Map<String,Object> emap = new HashMap<>();
 		emap.put("empno", 1004);
 		emap.put("ename", "천사");
-		emap.put("deptno", 1000);
+		emap.put("deptno", 55);
 		try {
 			Map<String,Object> dmap = new HashMap<>();
-			dmap.put("deptno", 1000);
+			dmap.put("deptno", 55);
 			dmap.put("dname", "개발부");
 			dmap.put("loc", "창동");
 			deptDao.deptInsert(dmap);

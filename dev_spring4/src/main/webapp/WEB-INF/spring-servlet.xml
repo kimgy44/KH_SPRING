@@ -2,11 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
 	<bean id="default-handler-mapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	<bean name="/di/myCar.sp" class="com.di.Pride"/>
+	<bean name="/myCar.sp" class="com.spring4.mvc.Sonata"/>
 	
 	<bean name="/di/insaList.sp" class="com.di.ListController">
-	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
+	<!-- property의 name은 setter 객체주입법 코드의 이름과 같아야 한다. -->	
  		<property name ="insaBean"> 
 			<list>
 				<value> (●'◡'●) </value>
@@ -15,8 +16,8 @@
 			</list>
 		</property>
 	</bean>
-<bean name="/di/insaMap.sp" class="com.di.MapController">
-	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
+	<bean name="/di/insaMap.sp" class="com.di.MapController">
+	<!-- property의 이름은 setter 객체주입법 코드의 이름과 같아야 한다. -->	
  		<property name ="insaMsg"> 
 			<map>
 				<entry>
@@ -35,9 +36,9 @@
 		</property>
 	</bean>
 	
-	<bean name="/di/myCar.sp" class="com.di.Pride"/>
+
 	
-	<bean name="/myCar.sp" class="com.spring4.mvc.Sonata"/>
+
 	<!-- <bean name ="/di/hello.sp" class="com.spring4.mvc.HelloController"/> -->
 	
 	<bean id="url-mapping"
@@ -52,11 +53,9 @@
 	
   	<bean id="auth-controller" class="com.spring4.mvc.AuthController">
 		<property name="methodNameResolver" ref="auth-resolver"/>
-		<!-- property의 name은 setter객체주입법 코드의 이름이어야 합니다. -->
+	<!-- property의 name은 setter 객체주입법 코드의 이름과 같아야 한다. -->	
 		<property name="authLogic" ref="auth-logic"/>
   	</bean>
-     
-	
 	<!-- ========== xml에서 bean태그에 클래스 선엄함. AuthController auth-controller = null; ==========  -->	
 	<bean id="auth-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
 		<property name="mappings">
@@ -67,12 +66,12 @@
 	</bean>	
 	
 	
-	<bean name="emp-controller" class="com.spring4.tr.EmpController">
- 		<property name ="methodNameResolver" ref="emp-resolver" /> 
-	<!-- property의 이름은 setter메소드 이름과 반드시! 같아야 한다. -->	
- 		<property name ="empLogic" ref="emp-Logic"/> 
-	</bean>
-	
+  	<bean id="emp-controller" class="com.spring4.tr.EmpController">
+		<property name="methodNameResolver" ref="emp-resolver"/>
+		<!-- property의 name은 setter객체주입법 코드의 이름이어야 합니다. -->
+		<property name="empLogic" ref="emp-logic"/>
+  	</bean>
+  	
 	<bean name="emp-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
 		<property name="mappings">
 			<props>
@@ -80,7 +79,6 @@
 			</props>
 		</property>	
 	</bean>
-	
 	
 	<!-- ModelAndView 사용시 배포 위치에 대한 선언 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

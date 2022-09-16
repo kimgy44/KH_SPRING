@@ -4,10 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
-import com.spring4.mvc.AuthController;
-
-public class EmpController {
+public class EmpController extends MultiActionController {
 	Logger logger = Logger.getLogger(EmpController.class);
 	
 	private EmpLogic empLogic = null;
@@ -16,9 +15,7 @@ public class EmpController {
 	}
 
 	public String doEmp(HttpServletRequest req, HttpServletResponse res) {
-		logger.info("dev_spring emp 호출 성공");
-		System.out.println("dev_spring emp 호출 성공");
-		String path = "redirect:index.jsp";
+		logger.info("dev_spring : empController 호출 성공");
 		int result = 0;
 		result = empLogic.doEmp();
 		return "redirect:empList.sp";

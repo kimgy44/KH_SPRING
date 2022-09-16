@@ -17,6 +17,6 @@ public class DeptDao {
 		logger.info(pMap);
 		int result = 0;
 		result = sqlSessionTemplate.update("deptInsert", pMap);
-		return 0;
+		return result;
 	}
 }

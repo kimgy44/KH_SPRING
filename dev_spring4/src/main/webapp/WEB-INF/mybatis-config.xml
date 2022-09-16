@@ -3,7 +3,7 @@
  "http://mybatis.org/dtd/mybatis-3-config.dtd">
  <configuration>
 	<settings>
-		<setting name="jdbcTypeForNull" value="NULL" />​
+		<setting name="jdbcTypeForNull" value="NULL"/>
 	</settings>
    <typeAliases>
       <typeAlias alias="mVO" type="com.vo.MemberVO"/>
