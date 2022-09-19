@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.Logger"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
@@ -14,7 +13,6 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.AbstractController"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
     <fullyQualifiedTypeName name="com.sun.org.slf4j.internal.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -28,10 +26,14 @@
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.dao.DataAccessException"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.startup.VersionLoggerListener"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.spi.LoggerFactory"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 </qualifiedTypeNameHistroy>
