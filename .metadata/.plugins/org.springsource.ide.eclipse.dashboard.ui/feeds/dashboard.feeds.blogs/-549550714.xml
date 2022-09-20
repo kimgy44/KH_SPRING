@@ -5,7 +5,54 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-09-19T15:51:00Z</updated>
+  <updated>2022-09-20T07:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring - September 20th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/20/this-week-in-spring-september-20th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-09-20:4913</id>
+    <updated>2022-09-20T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt; wherein I endeavor as best as I can to capture the latest-and-greatest in the wide, wacky, and wonderful world of Springdom! Naturally, I fail miserably basically every week. There&amp;rsquo;s no way I could hope to capture everything of note. But I persist&amp;hellip; &lt;/p&gt;
+&lt;p&gt;So, without further ado, yet another wonderful week&amp;rsquo;s roundup! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[A Bootiful Podcast: big data legend, former Pivot, and friend to the Spring community, Tim Spann](&lt;a href="https://spring.io/blog/2022/09/15/"&gt;https://spring.io/blog/2022/09/15/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/14/spring-cloud-dataflow-2-9-6-released"&gt;Spring Cloud Dataflow 2.9.6 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/19/spring-data-2022-0-0-m6-2021-2-3-and-2021-1-7-released"&gt;Spring Data 2022.0.0-M6, 2021.2.3, and 2021.1.7 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/19/spring-data-rest-vulnerability-cve-2022-31679"&gt;Spring Data REST Vulnerability (CVE-2022-31679)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/15/spring-framework-6-0-0-m6-and-5-3-23-available-now"&gt;Spring Framework 6.0.0-M6 and 5.3.23 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/19/spring-security-6-0-0-m7-and-5-8-0-m3-are-released"&gt;Spring Security 6.0.0-M7 and 5.8.0-M3 are released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/16/spring-tools-4-16-0-released"&gt;Spring Tools 4.16.0 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.feedspot.com/spring_blogs/"&gt;15 Best Spring Framework Blogs and Websites in 2022&lt;/a&gt;&lt;br/&gt;a-bootiful-podcast-big-data-legend-former-pivot-and-friend-to-the-spring-community-tim-spann)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/09/15/app-rollout-features-reach-stable/"&gt;Blog: Kubernetes 1.25: Two Features for Apps Rollouts Graduate to Stable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/711688693/0/baeldung~Difference-Between-ClassgetResource-and-ClassLoadergetResource"&gt;Difference Between Class.getResource() and ClassLoader.getResource()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/712177184/0/baeldung~Map-a-JSON-POST-to-Multiple-Spring-MVC-Parameters/"&gt;Map a JSON POST to Multiple Spring MVC Parameters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;m honored to be included in a list of &lt;a href="https://biztechmagazine.com/article/2022/09/30-small-business-it-influencers-worth-following-2022"&gt;30 Small Business IT Influencers Worth Following in 2022&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 6.0.0-M7 and 5.8.0-M3 are released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/19/spring-security-6-0-0-m7-and-5-8-0-m3-are-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marcus Hert Da Coregio</name>
+    </author>
+    <id>tag:spring.io,2022-09-19:4912</id>
+    <updated>2022-09-19T16:00:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Security 6.0.0-M7 and 5.8.0-M3 are available now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/6.0.0-M7"&gt;6.0.0-M7&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.8.0-M3"&gt;5.8.0-M3&lt;/a&gt; release notes for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Data 2022.0.0-M6, 2021.2.3, and 2021.1.7 released</title>
     <link rel="alternate" href="https://spring.io/blog/2022/09/19/spring-data-2022-0-0-m6-2021-2-3-and-2021-1-7-released" />
@@ -78,24 +125,8 @@
     </author>
     <id>tag:spring.io,2022-09-19:4911</id>
     <updated>2022-09-19T15:49:00Z</updated>
-    <content type="html">&lt;p&gt;&lt;strong&gt;Updates&lt;/strong&gt;&lt;br/&gt;- &lt;strong&gt;[09-19]&lt;/strong&gt; Vulnerability announced here and Spring Data REST &lt;strong&gt;3.6.7&lt;/strong&gt; and &lt;strong&gt;3.7.1&lt;/strong&gt; released&lt;/p&gt;&lt;h2&gt;&lt;a href="#table-of-contents" class="anchor" name="table-of-contents"&gt;&lt;/a&gt;Table of Contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#overview"&gt;Overview&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#vulnerability"&gt;Vulnerability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#am-i-impacted"&gt;Am I Impacted&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#status"&gt;Status&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#overview" class="anchor" name="overview"&gt;&lt;/a&gt;Overview&lt;/h3&gt;
-&lt;p&gt;We would like to announce that we have &lt;a href="https://spring.io/blog/2022/09/19/spring-data-2022-0-0-m6-2021-2-3-and-2021-1-7-released"&gt;released Spring Data REST 3.6.7 and 3.7.1&lt;/a&gt; to address &lt;a href="https://tanzu.vmware.com/security/cve-2022-31679"&gt;a vulnerability&lt;/a&gt; that would allow unintended data exposure for resources by Spring Data REST.&lt;/p&gt;&lt;h3&gt;&lt;a href="#vulnerability" class="anchor" name="vulnerability"&gt;&lt;/a&gt;Vulnerability&lt;/h3&gt;
-&lt;p&gt;Applications that allow HTTP PATCH access to resources exposed by Spring Data REST if an attacker knows about the structure of the underlying domain model, they can craft HTTP requests that expose hidden entity attributes. This vulnerability was initially discovered and responsibly reported by 白帽酱 @burpheart.&lt;/p&gt;&lt;h3&gt;&lt;a href="#am-i-impacted" class="anchor" name="am-i-impacted"&gt;&lt;/a&gt;Am I Impacted?&lt;/h3&gt;
-&lt;p&gt;These are the necessary conditions for the specific vulnerability:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;You are using versions 3.6.0 - 3.5.5, 3.7.0 - 3.7.2, and older unsupported versions of Spring Data REST&lt;/li&gt;
-  &lt;li&gt;Your application is configured to accept HTTP PATCH requests in general and for the resources exposed by Spring Data REST in particular&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#mitigation" class="anchor" name="mitigation"&gt;&lt;/a&gt;Mitigation&lt;/h3&gt;
-&lt;p&gt;Users of affected versions should apply the following mitigation:&lt;br/&gt;- 3.6.x users should upgrade to 3.6.7+ (included in Spring Boot 2.6.12+).&lt;br/&gt;- 3.7.x users should upgrade to 3.7.3+ (included in Spring Boot 2.7.4+).&lt;/p&gt;&lt;h3&gt;&lt;a href="#status" class="anchor" name="status"&gt;&lt;/a&gt;Status&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Data REST 3.67 and 3.7.1, which contain the fixes, have been released.&lt;/li&gt;
-&lt;/ul&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;Updates&lt;/strong&gt;&lt;br/&gt;- &lt;strong&gt;[09-19]&lt;/strong&gt; Vulnerability announced here and Spring Data REST &lt;strong&gt;3.6.7&lt;/strong&gt; and &lt;strong&gt;3.7.1&lt;/strong&gt; released&lt;br/&gt;- &lt;strong&gt;[09-19]&lt;/strong&gt; Blog post updated to refer to the CVE report published&lt;/p&gt;
+&lt;p&gt;The Spring Data 2021.1.7 and 2021.2.3 releases shipped &lt;a href="https://spring.io/blog/2022/09/19/spring-data-2022-0-0-m6-2021-2-3-and-2021-1-7-released"&gt;on September 19th&lt;/a&gt; contained releases for Spring Data REST 3.6.7 and 3.7.1 which include fixes for &lt;a href="https://tanzu.vmware.com/security/cve-2022-31679"&gt;CVE-2022-31679&lt;/a&gt;. Users are encouraged to update as soon as possible.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
@@ -969,53 +1000,6 @@ class RequestHashingGatewayFilterFactoryTest {&#xD;
 &lt;p&gt;We would like to thank all contributors who had a role in this release! As we continue our work on Spring Batch 5, we look forward to your feedback on &lt;a href="https://github.com/spring-projects/spring-batch/issues"&gt;Github&lt;/a&gt;, &lt;a href="https://twitter.com/springbatch"&gt;Twitter&lt;/a&gt; and &lt;a href="https://stackoverflow.com/questions/tagged/spring-batch"&gt;StackOverflow&lt;/a&gt;.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt;|&lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on Github&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-batch/docs/5.0.0-M5/reference/html/index-single.html"&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - August 23rd, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/08/23/this-week-in-spring-august-23rd-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-08-23:4891</id>
-    <updated>2022-08-23T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a &lt;em&gt;ton&lt;/em&gt; to cover, so let&amp;rsquo;s dive right into it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/18/a-bootiful-podcast-flowable-founder-joram-barrez-on-a-bootiful-podcast-on-workflow-business-process-management-and-more"&gt;A Bootiful Podcast: Flowable founder Joram Barrez on a Bootiful Podcast on workflow, business process management, and more&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/707579474/0/baeldung~Building-IoT-Applications-Using-Fauna-and-Spring"&gt;Building IoT Applications Using Fauna and Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://dev.to/mkheck/cosmos-db-for-spring-developers-part-i-using-cosmos-db-as-a-sql-database-28me"&gt;Cosmos DB for Spring Developers, Part I: Using Cosmos DB as a SQL Database&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://paketo.io/docs/howto/web-servers/#build-and-serve-a-frontend-framework-app"&gt;How to Build Web Servers with Paketo Buildpacks - Paketo Buildpacks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/16/introducing-experimental-spring-support-for-apache-pulsar"&gt;Introducing Experimental Spring Support for Apache Pulsar&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/706628598/0/baeldung~Propagating-Exceptions-With-OpenFeign-and-Spring"&gt;Propagating Exceptions With OpenFeign and Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/17/spring-authorization-server-0-4-0-m1-available-now"&gt;Spring Authorization Server 0.4.0-M1 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/17/spring-authorization-server-1-0-0-m1-available-now"&gt;Spring Authorization Server 1.0.0-M1 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/17/spring-boot-2-6-11-available-now"&gt;Spring Boot 2.6.11 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/18/spring-boot-2-7-3-available-now"&gt;Spring Boot 2.7.3 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/@salithachathuranga94/spring-boot-actuator-6f79f93fa1b2"&gt;Spring Boot Actuator&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/paketo-buildpacks/native-image/issues/176"&gt;Spring Boot Native image builds with 22.2.0 are failing · Issue #176 paketo-buildpacks/native-image&lt;/a&gt; - this is in regards to an issue related to Buildpacks that just appeared last week. There&amp;rsquo;s a workaround that&amp;rsquo;s been recently deployed.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=VVn9OG9nfH0"&gt;Spring Boot and Spring Security with JWT including Access and Refresh Tokens &#x1f511;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/707545216/0/baeldung~Spring-JDBC-Batch-Inserts"&gt;Spring JDBC Batch Inserts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/16/spring-security-5-8-0-m2-is-released"&gt;Spring Security 5.8.0-M2 is released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/08/19/spring-shell-2-1-1-is-now-available"&gt;Spring Shell 2.1.1 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/javarevisited/spring-for-graphql-with-querydsl-9c4964a225d9"&gt;Spring for GraphQL with Querydsl.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=1PUshxvTbAc"&gt;Testcontainers and Spring Boot for local development and integration testing &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Shell 2.1.1 is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/08/19/spring-shell-2-1-1-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2022-08-19:4889</id>
-    <updated>2022-08-19T13:48:55Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Shell &lt;code&gt;2.1.1&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/release"&gt;https://repo.spring.io/release&lt;/a&gt; and Maven Central.&lt;/p&gt;
-&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v2.1.1"&gt;release notes&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-shell/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-shell/docs/2.1.1/site/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+import com.util.HashMapBinder;
 
 
 //여기선 어노테이션 사용하지 않는다.
@@ -39,20 +40,27 @@ public class BoardController extends MultiActionController {
       logger.info(boardList);
       //model.addAttribute("boardList", boardList); // scope:request
       req.setAttribute("boardList", boardList);
-      return "forward:list.jsp";
+      return "forward:boardList.jsp";
    }
 
    public String boardDetail(HttpServletRequest req, HttpServletResponse res) {
       logger.info("boardDetail호출 성공");
       Map<String,Object> pMap = new HashMap<>();
-      boardLogic.boardDetail(null);
+      HashMapBinder hmb = new HashMapBinder(req);
+      hmb.bind(pMap);
+      List<Map<String,Object>> boardList = null;
+      boardList = boardLogic.boardDetail(pMap);
+      req.setAttribute("boardList", boardList);
       return "forward:read.jsp";
    }
 
    public String boardInsert(HttpServletRequest req, HttpServletResponse res) {
-      logger.info("boardInsert 호출 성공");
       Map<String,Object> pMap = new HashMap<>();
-      boardLogic.boardInsert(null);
+      logger.info("boardInsert 호출 성공 : " +pMap);
+      HashMapBinder hmb = new HashMapBinder(req);
+      //hmb.bind(pMap); //첨부파일이 없을때
+      hmb.multiBind(pMap);
+      boardLogic.boardInsert(pMap);
       // redirect-forward, forward->forward(에러)
       return "redirect:boardList.jsp";
    }
@@ -60,7 +68,9 @@ public class BoardController extends MultiActionController {
    public String boardUpdate(HttpServletRequest req, HttpServletResponse res) {
       logger.info("boardUpdate 호출 성공");
       Map<String,Object> pMap = new HashMap<>();
-      boardLogic.boardUpdate(null);
+      HashMapBinder hmb = new HashMapBinder(req);
+      hmb.bind(pMap);
+      boardLogic.boardUpdate(pMap);
       // redirect-forward, forward->forward(에러)
       return "redirect:boardList.jsp";
    }
@@ -68,7 +78,9 @@ public class BoardController extends MultiActionController {
    public String boardDelete(HttpServletRequest req, HttpServletResponse res) {
       logger.info("boardDelete  호출 성공");
       Map<String,Object> pMap = new HashMap<>();
-      boardLogic.boardDelete(null);
+      HashMapBinder hmb = new HashMapBinder(req);
+      hmb.bind(pMap);
+      boardLogic.boardDelete(pMap);
       // redirect-forward, forward->forward(에러)
       return "redirect:boardList.jsp";
    }
