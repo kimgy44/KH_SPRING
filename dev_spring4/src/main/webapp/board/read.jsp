@@ -48,7 +48,6 @@
 		$("#dlg_boardUpd").dialog('open');
 	}
 	function dlgUpd_save(){
-		alert("수정해바");
 		$("#f_boardUpd").submit();
 	}
 	function deleteForm(){

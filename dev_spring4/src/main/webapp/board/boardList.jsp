@@ -48,7 +48,7 @@
 		console.log("콤보박스 값: "+cb_value+", 사용자가 입력한 키워드: "+ tb_value);
 		location.href = "boardList.sp?cb_search="+cb_value+"&tb_search="+tb_value+"&b_date="+v_date;
 		
-	}	//////////////////////////여기내꺼 확인좀해보자!!!!!!!!!!!!!!!!!!!!!!!!!!
+	}	
 	function boardDetail(bm_no){
 	}
     function fileDown(fname){
@@ -172,7 +172,6 @@
 	else if(size>0){
 		//for(int i=0;i<size;i++){
 		for(int i = nowPage*numPerPage; i<(nowPage*numPerPage)+numPerPage; i++){
-			
 			if(size == i) break;
 			Map<String,Object> rMap = boardList.get(i);
 %>	      
@@ -189,13 +188,11 @@
 		for(int j=0; j<Integer.parseInt(rMap.get("B_POS").toString());j++){
 			out.print("&nbsp;&nbsp;");
 		}//////end of for
-
 %>
 	<img src="<%=imgpath %>reply.gif"/>
 <%
-	}
+	}//너 댓글이니까.... 댓글 아이콘 추가
 %>
-        		
 <a href="javascript:boardDetail('<%=rMap.get("B_NO")%>')" style="text-decoration:none;color:#000000">
         		<%=rMap.get("B_TITLE")%>
 </a>        		
@@ -291,7 +288,7 @@
 <!-- 글입력 화면 추가 시작 -->
     <div id="dlg_boardIns" footer="#tb_boardIns" class="easyui-dialog" title="글쓰기" data-options="modal:true,closed:true" style="width:600px;height:400px;padding:10px">
 		<form id="f_boardIns" method="post" enctype="multipart/form-data" action="./boardInsert.sp">
-        <!-- <form id="f_boardIns" method="get" action="./boardInsert.sp"> -->
+      <!--    <form id="f_boardIns" method="get" action="./boardInsert.sp">-->
 	    <input type="hidden" id="b_no" name="b_no" value="0">
 	    <input type="hidden" id="b_group" name="b_group" value="0">
 	    <input type="hidden" id="b_pos" name="b_pos" value="0">

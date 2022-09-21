@@ -10,14 +10,12 @@ public class BoardLogic {
 	Logger logger = Logger.getLogger(BoardLogic.class);
 
 	private BoardDao boardDao = null;
-	// 로직에서는 그대로 모두 사용함 ﻿→ RequestParam이나 RequestMapping, Model 모두 필요없음
-	// 공통된 관심사는 트랜잭션 처리 ﻿→ 하나의 메서드에서 Dao에 두개 메서드 호출이 필요함
-	// board_master_t, board_sub_t
-
 	public void setBoardDao(BoardDao boardDao) {
 		this.boardDao = boardDao;
 	}
-
+	// 로직에서는 그대로 모두 사용함 ﻿→ RequestParam이나 RequestMapping, Model 모두 필요없음
+	// 공통된 관심사는 트랜잭션 처리 ﻿→ 하나의 메서드에서 Dao에 두개 메서드 호출이 필요함
+	// board_master_t, board_sub_t
 	public List<Map<String, Object>> boardDetail(Map<String, Object> pMap) {
 		logger.info("boardDetail 호출 성공");
 		List<Map<String, Object>> boardList = null;
@@ -39,8 +37,7 @@ public class BoardLogic {
 	// 하나의 메소드 안에서 Dao의 여러 메소드를 호출 할 수 있음 - 트랜잭션처리 공통된 관심사를 갖는 부분
 	// 로직은 여러 가지의 처리를 할 수 있고 이에 따른 선택기준이 필요한 부분
 	public int boardInsert(Map<String, Object> pMap) {
-
-		logger.info("boardInsert 호출 성공");
+		logger.info("boardInsert 호출 성공"+pMap);
 		int result = 0;
 		int b_no = 0;
 		int b_group = 0;

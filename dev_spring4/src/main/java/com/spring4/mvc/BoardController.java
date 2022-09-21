@@ -54,16 +54,16 @@ public class BoardController extends MultiActionController {
       return "forward:read.jsp";
    }
 
-   public String boardInsert(HttpServletRequest req, HttpServletResponse res) {
-      Map<String,Object> pMap = new HashMap<>();
-      logger.info("boardInsert 호출 성공 : " +pMap);
-      HashMapBinder hmb = new HashMapBinder(req);
-      //hmb.bind(pMap); //첨부파일이 없을때
-      hmb.multiBind(pMap);
-      boardLogic.boardInsert(pMap);
-      // redirect-forward, forward->forward(에러)
-      return "redirect:boardList.jsp";
-   }
+	public String boardInsert(HttpServletRequest req, HttpServletResponse res) {
+		logger.info("boardInsert 호출 성공");
+		Map<String,Object> pMap = new HashMap<>();
+		HashMapBinder hmb = new HashMapBinder(req);
+		//hmb.bind(pMap);
+		hmb.multiBind(pMap);
+		boardLogic.boardInsert(pMap);
+		//redirect-forward, forward->forward(에러)
+		return "redirect:boardList.sp";
+	}
 
    public String boardUpdate(HttpServletRequest req, HttpServletResponse res) {
       logger.info("boardUpdate 호출 성공");
@@ -72,7 +72,7 @@ public class BoardController extends MultiActionController {
       hmb.bind(pMap);
       boardLogic.boardUpdate(pMap);
       // redirect-forward, forward->forward(에러)
-      return "redirect:boardList.jsp";
+      return "redirect:boardList.sp";
    }
 
    public String boardDelete(HttpServletRequest req, HttpServletResponse res) {
@@ -82,6 +82,6 @@ public class BoardController extends MultiActionController {
       hmb.bind(pMap);
       boardLogic.boardDelete(pMap);
       // redirect-forward, forward->forward(에러)
-      return "redirect:boardList.jsp";
+      return "redirect:boardList.sp";
    }
 }

@@ -32,7 +32,7 @@ public class BoardController {
 	Logger logger = LoggerFactory.getLogger(BoardController.class);
 	@Autowired(required=false)
 	private BoardLogic boardLogic = null;
-	private final String filePath ="C:\\KH-SPRING\\basic\\src\\main\\webapp\\pds"; // 파일이 저장될 위치
+	private final String filePath ="C:\\KH-SPRING\\demo0921\\src\\main\\webapp\\pds"; // 파일이 저장될 위치
 	@ResponseBody
 	@GetMapping(value="/helloworld.sp4", produces="text/plain;charset=UTF-8")
 	public String helloWorld() {
@@ -109,11 +109,11 @@ public class BoardController {
 		int result = 0;
 		Map<String, Object> pMap = new HashMap<>();
 		HashMapBinder hmb = new HashMapBinder(mpRequest);
-		hmb.mbind(pMap);
+		hmb.bind(pMap);
 		if(!b_file.isEmpty()) {
 			String filename = HangulConversion.toUTF(b_file.getOriginalFilename());
 			logger.info("한글 처리 테스트 : "+filename);
-			String savePath = "C:\\KH-SPRING\\basic\\src\\main\\webapp\\pds";
+			String savePath = "C:\\KH-SPRING\\demo0921\\src\\main\\webapp\\pds";
 			// 파일에 대한 풀 네임 담기
 			String fullPath = savePath+"\\"+filename;
 			try {
