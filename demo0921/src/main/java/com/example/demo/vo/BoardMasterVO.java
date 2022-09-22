@@ -16,8 +16,8 @@ public class BoardMasterVO {
 	private String	 b_pw      = "";
 	public BoardSubVO BoardSubVO = null;
 	private String	 b_file     = "";
-	private String	 b_size     = "";
-	private String	 b_seq     = "";
+	private String	 bs_size     = "";
+	private String	 bs_seq     = "";
 	
 	public int getB_no() {
 		return b_no;
@@ -90,18 +90,6 @@ public class BoardMasterVO {
 	}
 	public void setB_file(String b_file) {
 		this.b_file = b_file;
-	}
-	public String getB_size() {
-		return b_size;
-	}
-	public void setB_size(String b_size) {
-		this.b_size = b_size;
-	}
-	public String getB_seq() {
-		return b_seq;
-	}
-	public void setB_seq(String b_seq) {
-		this.b_seq = b_seq;
 	}
 	
 

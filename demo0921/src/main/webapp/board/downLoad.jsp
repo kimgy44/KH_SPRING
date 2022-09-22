@@ -3,7 +3,7 @@
 <%@ page import="java.io.*,java.net.*" %>    
 <%
 //사용자 화면으로 부터 파일명을 받아서 저장함.
-	String b_file = request.getParameter("bs_file");
+	String b_file = request.getParameter("b_file");
 	String fname = b_file;
 	//out.print("b_file: 8->euc"+b_file);		
 	//out.print("<br>");		

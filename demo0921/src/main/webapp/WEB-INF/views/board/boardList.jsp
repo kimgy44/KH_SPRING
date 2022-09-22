@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, com.util.PageBar" %>  
+<%@ page import="java.util.*, com.util.PageBar" %>    
 <%
 // jsp에서 자바코드(스크립틀릿)와 html코드의 작성 위치는 문제가 되지 않는다.
 // 왜냐하면 어차피 jsp는 서버에서 실행되고 그 결과가 text로 출력되는 것이므로
@@ -28,7 +28,7 @@
 <head>
 <!-- <meta charset="UTF-8"> 이것때문에 한글깨짐.-->
 <title>MVC기반의 계층형 게시판 구현하기</title>
-<%@ include file="../common/easyui_common.jsp" %>
+<%@ include file="/common/easyui_common.jsp" %>
 <script type="text/javascript">
 	let g_no=0; //그리드에서 선택이 바뀔때 마다 변경된 값이 저장됨.
 	let tb_value; // 사용자가 입력한 문자열 담기
@@ -46,7 +46,7 @@
 		cb_value = user_combo;
 		tb_value = $("#tb_search").val(); // 사용자가 입력한 조건 검색 문자열
 		console.log("콤보박스 값: "+cb_value+", 사용자가 입력한 키워드: "+ tb_value);
-		location.href = "boardList.sp4?cb_search="+cb_value+"&tb_search="+tb_value+"&b_date="+v_date;
+		location.href = "boardList?cb_search="+cb_value+"&tb_search="+tb_value+"&b_date="+v_date;
 		
 	}	//////////////////////////여기내꺼 확인좀해보자!!!!!!!!!!!!!!!!!!!!!!!!!!
 	function boardDetail(bm_no){
@@ -86,7 +86,7 @@
 			},
 			onDblClickCell: function(index, field, value){
 				if("B_TITLE" == field){
-					location.href="./boardDetail.sp4?b_no="+g_no;
+					location.href="./boardDetail?b_no="+g_no;
 					g_no = 0;
 					$("#dg_board").datagrid('clearSelections')
 				}
@@ -184,7 +184,7 @@
 <%
 // 스크립틀릿 안에 작성한 코드는 라이프 사이클에서 service()들어간다.
 // 그러니까 메소드 선언 안됨
-	String imgpath = path+"..\\images\\";
+	String imgpath = path+"\\images\\";
 	if(Integer.parseInt(rMap.get("B_POS").toString()) > 0){
 		for(int j=0; j<Integer.parseInt(rMap.get("B_POS").toString());j++){
 			out.print("&nbsp;&nbsp;");
@@ -258,7 +258,7 @@
 <!-- 페이지 네이션 추가 시작 -->
 	<div style="display:table-cell;vertical-align:middle; width:800px; background:#efefef; height:30; border:1px solid #ccc;">
 <%
-	String pagePath = "boardList.sp4";
+	String pagePath = "boardList";
 	PageBar pb = new PageBar(numPerPage, size, nowPage, pagePath);
 	out.print(pb.getPageBar());
 %>
@@ -290,8 +290,8 @@
 %>
 <!-- 글입력 화면 추가 시작 -->
     <div id="dlg_boardIns" footer="#tb_boardIns" class="easyui-dialog" title="글쓰기" data-options="modal:true,closed:true" style="width:600px;height:400px;padding:10px">
-		<form id="f_boardIns" method="post" enctype="multipart/form-data" action="./boardInsert.sp4">
- 		<!-- <form id="f_boardIns" method="get" action="./boardInsert.sp4"> -->
+		<form id="f_boardIns" method="post" enctype="multipart/form-data" action="./boardInsert">
+ 		<!-- <form id="f_boardIns" method="get" action="./boardInsert"> -->
 	    <input type="hidden" id="b_no" name="b_no" value="0">
 	    <input type="hidden" id="b_group" name="b_group" value="0">
 	    <input type="hidden" id="b_pos" name="b_pos" value="0">

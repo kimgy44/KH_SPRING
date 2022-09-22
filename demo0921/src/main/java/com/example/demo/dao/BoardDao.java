@@ -17,12 +17,44 @@ public class BoardDao {
    @Autowired(required=false)
    private SqlSessionTemplate sqlSessionTemplate = null;
 
+   public int proc_boardinsert(Map<String, Object> pMap) {
+	      logger.info("proc_boardinsert 호출 성공"+pMap);
+	      int result = 0;
+	      List<Map<String, Object>> boardList = null;
+	      try {
+	         sqlSessionTemplate.selectOne("proc_boardinsert", pMap);
+	         if(pMap.get("result")!=null) {
+	        	 result = Integer.parseInt(pMap.get("result").toString());
+	         }
+	         // insert here
+	         logger.info("result :"+result);
+	      } catch (DataAccessException e) {
+	         logger.info("Exception : "+e.toString());
+	      } 
+	      return result;
+	   }
+   
+   public List<Map<String, Object>> proc_boardList(Map<String, Object> pMap) {
+	      logger.info("boardList 호출 성공");
+	      List<Map<String, Object>> boardList = null;
+	      try {
+	         sqlSessionTemplate.selectOne("proc_boardList", pMap);
+	         boardList = (List<Map<String, Object>>)pMap.get("key");
+	         // insert here
+	         logger.info(boardList.toString());
+	      } catch (DataAccessException e) {
+	         logger.info("Exception : "+e.toString());
+	      } 
+	      return boardList;
+	   }
+   
    public List<Map<String, Object>> boardList(Map<String, Object> pMap) {
       logger.info("boardList 호출 성공");
       List<Map<String, Object>> boardList = null;
       try {
-         sqlSessionTemplate.selectOne("boardList", pMap);
-         boardList = (List<Map<String, Object>>)pMap.get("key");
+         //sqlSessionTemplate.selectList("boardList", pMap);
+       //  boardList = (List<Map<String, Object>>)pMap.get("key");
+    	  boardList = sqlSessionTemplate.selectList("boardList", pMap);
          // insert here
          logger.info(boardList.toString());
       } catch (DataAccessException e) {
