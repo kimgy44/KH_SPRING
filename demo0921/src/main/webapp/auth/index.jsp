@@ -2,14 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@ page import ="com.example.demo.vo.MemberVO" %>
 <%
-	MemberVO mVO = (MemberVO)session.getAttribute("mVO");
-	String s_id = null;
-	String s_name = null;
-	if(mVO !=null){
-	s_id = mVO.getMem_id();
-	s_name = mVO.getMem_name();
-	}
-	out.print(s_id+", "+s_name);
+	String smem_id = (String)session.getAttribute("smem_id");
+	String smem_name = (String)session.getAttribute("smem_name");
+	out.print(smem_id+", "+smem_name);
+
 %>
 
 <!DOCTYPE html>
@@ -24,6 +20,8 @@
 		}	
 	</style>
 	<script type="text/javascript">
+		let to_id; // 받는 사람 id - 사용자가 입력하는 것이 아니라 쪽지쓰기 로우에서 자동으로 담기
+		let to_name;// 받는 사람 이름 - 
 	//함수 선언은 head태그 안에서 한다
 	//easyui_common.jsp
 		function memberInsert() {
@@ -35,14 +33,15 @@
 		function memberDelete() {
 			alert("삭제");
 		}
-		function login(){
-			const tb_id = $("#mem_id").val();
-			const tb_pw = $("#mem_pw").val();			
-			location.href="./login.pj?mem_id="+tb_id+"&mem_pw="+tb_pw;
-		}
-		function logout(){
-			location.href="./logout.jsp";
-		}
+		function login() {
+	          const mem_id = $("#mem_id").val();
+	          const mem_pw = $("#mem_pw").val();
+	          location.href = "/member/login?mem_id="+mem_id+"&mem_pw="+mem_pw;
+	       }
+	       function logout() {
+	          location.href="./logout.jsp";
+	       }
+
 		//순서지향적인, 절차지향적인 코딩 -> 모듈화 -> 비동기처럼 처리 하기(연습-await, async)
 		  function memberList(){
          //alert("회원목록 호출 성공");
@@ -63,13 +62,18 @@
 			//시점
 			//jeasyUI datagrid에서도 get방식과 post방식 지원함 - 차이점
 			//url속성에 XXX.jsp가 오면 표준 서블릿인 HttpServlet이 관여하는 것이고
-			//XXX.pj로 요청하면 ActionSupport가 관여하는 것이다.
+			//XXX로 요청하면 ActionSupport가 관여하는 것이다.
 			$("#dg_member").datagrid({
 				//오라클서버에서 요청한 결과를 myBatis를 사용하면 자동으로 컬럼명이 대문자
 				//단 List<XXVO>형태라면 그땐 소문자가 맞다
 			   method:"get"
-               ,url:"/member/memberList.pj?type="+type+"&keyword="+keyword // 응답페이지는 JSON포맷의 파일이어야 함 (html이 아니라)
-			   ,onDblClickCell: function(index,field,value){
+               ,url:"/member/jsonMemberList?type="+type+"&keyword="+keyword // 응답페이지는 JSON포맷의 파일이어야 함 (html이 아니라)
+			   ,onSelect : function(index, row){
+				   to_id = row.MEM_ID;//데이터그리드 선택시 해당로우의 아이디 담기
+				   to_name = row.MEM_NAME;//데이터그리드 선택시 해당 로우의 이름 담기
+			       console.log(to_id+", "+to_name);
+			   }
+				,onDblClickCell: function(index,field,value){
 				   console.log(index+","+field+", "+value);
 				   if("BUTTON" == field){
 					   alert("쪽지쓰기");
@@ -85,6 +89,24 @@
 			$("#d_member").hide();
 			$("#d_memberInsert").show();
 		}
+		
+		function memoForm(){
+			console.log("memoForm 호출 성공")
+			  $("#dlg_memo").dialog({
+		            title: "쪽지쓰기",
+		            href: "/memo/memoForm.jsp?to_id="+to_id+"&to_name="+to_name,
+		            modal: true,
+		            closed: true
+		       });
+		      $("#dlg_memo").dialog('open');
+		}
+		function memoSend(){
+			console.log("쪽지보내기")
+			$("#f_memo").submit();
+		}
+		function memoFormClose(){
+			$("#dlg_memo").dialog('close');
+		}
 	</script>
 </head>
 <body>
@@ -94,7 +116,9 @@
 	$(document).ready(function(){	
 		$("#d_member").hide();
 		$("#d_memberInsert").hide();	
-		
+/* 단위테스트할때마다 매번 값넣기 귀차나,,,,디폴트로 임시로 아이디랑 비번 넣기,,,, */
+		$("#mem_id").textbox('setValue','apple');
+		$("#mem_pw").textbox('setValue','123');	
 		
 	});
 </script>
@@ -105,7 +129,7 @@
 			<div style="margin: 10px 0;"></div>
 <%
 	//s_name = "이순신";
-	if(s_name == null){
+	if(smem_name == null){
 %>  			
 <!--################ 로그인 영역 시작 ################-->
 			<div id="d_login" align="center">
@@ -140,7 +164,7 @@
 %>      
 <!--################ 로그아웃 영역 시작 ################-->      
 			 <div id="d_logout" align="center">
-			 	<div id="d_ok"><%=s_name%>님 환영합니다.</div>
+			 	<div id="d_ok"><%=smem_name%>님 환영합니다.</div>
 			 	<div style="margin:3px 0"></div>
 				<a id="btn_logout" href="javascript:logout()" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">
 				로그아웃
@@ -156,9 +180,6 @@
 <!--################ 메뉴 영역 시작 ################-->
 
     <div style="margin:20px 0;"></div>
-<%
-	if(s_id!=null){
-%>
     <ul id="tre_gym" class="easyui-tree" style="margin:0 6px;">
         <li data-options="state:'closed'">
             <span>회원관리</span>
@@ -200,9 +221,8 @@
             </ul>
         </li>        
     </ul>
-<%
-	}
-%>
+  <!--####################### 메뉴 영역  끝 #######################-->
+
 
     </div>
  
@@ -242,7 +262,7 @@
         </thead>
     </table>
         
- <!--        	<div id="dg_member"></div>
+         	<div id="dg_member"></div>
         	</div>
         	<div id="d_memberInsert">
         	<div style="margin: 5px 0;"></div>
@@ -250,9 +270,14 @@
         	<hr>
         	<div style="margin: 20px 0;"></div>
         	<div>회원등록화면 보여주기</div>
-        	</div> -->
+        	</div>
         <!--[[ 쪽지관리{받은쪽지함, 보낸쪽지함} ]]-->
- 
+ 	<div id="dlg_memo" footer="#btn_zipcode" class="easyui-dialog" 
+ 		title="쪽지쓰기" data-options="modal:true,closed:true"
+		style="width: 600px; height: 200px; padding: 10px">
+	<div id="btn_memo" align="right">
+	<a href="javascript:memoFormClose()" class="easyui-linkbutton"iconCls="icon-clear">닫기</a>
+	</div>
         	
         	
         </div>

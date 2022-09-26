@@ -8,11 +8,22 @@
 <%@ include file="../common/easyui_common.jsp" %>
 </head>
 <body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var t = $('#dong');
+		t.textbox('textbox').bind('keydown', function(e){
+			if (e.keyCode == 13){	// when press ENTER key, accept the inputed value.
+				zipcodeSearch();
+			}
+		});
+	})
+
+</script>
 	<div>
 		<lavel for="dong">동이름 입력</lavel>
 		<input id="dong" name="dong" class="easyui-textbox" style="width:300px"/>
 		<a href="javascript:zipcodeSearch()" class="easyui-linkbutton">검색</a>
-		<div id="d_zipcode"></div>
+		<div id="d_zipcode">^^</div>
 	</div>
 </body>
 </html>

@@ -9,7 +9,7 @@
       {CALL proc_deptlist(#{deptno, mode=IN},#{key, jdbcType=CURSOR, mode=OUT, javaType=java.sql.ResultSet, resultMap=deptMap})}
    </select>
    <insert id="deptInsert" parameterType="map">
-   INSERT INTO dept(deptno, dname, loc)
-         VALUES( #{deptno},#{dname},#{loc} )
+	   INSERT INTO dept(deptno, dname, loc)
+	    VALUES( #{deptno},#{dname},#{loc} )
    </insert>
 </mapper>
