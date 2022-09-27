@@ -18,9 +18,18 @@ public class MemberDao {
 	Logger logger = LoggerFactory.getLogger(MemberDao.class);
 	@Autowired(required = false)
 	private SqlSessionTemplate sqlSessionTemplate = null;
-
+	
+	// 받은쪽지 중 읽지 않은 쪽지 카운트하기
+	public int noReadMemo(Map<String, Object> pMap) {
+		logger.info("MemberDao : noReadMemo 호출 성공 ==> " + pMap);// pMap에 to_id가 있어야함
+		int cnt = 0;
+		cnt = sqlSessionTemplate.selectOne("noReadMemo", pMap);
+		logger.info("cnt ===>"+cnt);//배달 사고가 어디서 발생한건지 체크하기 위한 코드 추가 필요함
+		return cnt;
+	}
+	
 	public int memberinsert(Map<String, Object> pMap) {
-		logger.info("memberinsert 호출 성공 ==> " + pMap);// 101
+		logger.info("MemberDao : memberinsert 호출 성공 ==> " + pMap);// 101
 		int result = 0;
 		try {
 			sqlSessionTemplate.selectOne("proc_memberinsert", pMap);
@@ -36,7 +45,7 @@ public class MemberDao {
 	}
 
 	public MemberVO login(Map<String, Object> pMap) {
-		logger.info("login호출 성공");
+		logger.info("MemberDao : login호출 성공");
 		MemberVO mVO = null;
 		mVO = sqlSessionTemplate.selectOne("login", pMap);
 		return mVO;

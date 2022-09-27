@@ -18,21 +18,26 @@ import com.example.demo.vo.MemberVO;
 
 @Controller
 @RequestMapping("/member/*")
-@SessionAttributes({"smem_id","smem_name"})
+@SessionAttributes({"smem_id","smem_name","s_cnt"})
 public class MemberController {
    Logger logger = LogManager.getLogger(MemberController.class);
    
    @Autowired(required=false)
    private MemberLogic memberLogic = null;
    
-   @GetMapping("login")
+   @GetMapping("login") //원래는Post방식이 맞지만 단위테스트때문에 Get
    public String login(HttpSession session,@RequestParam Map<String,Object> pMap) {
-      logger.info("login호출 성공 : "+pMap);
+	  // 사용자로부터 아이디와 비번을 받아야하니까 파라미터 있어야함(화면에 넣어둔거)
+	  // 세션도 필요함 (세션이름정의)
+	  logger.info("login호출 성공 : "+pMap);
+	   
       MemberVO mVO = null;
       mVO = memberLogic.login(pMap);
       if(mVO != null) {
          session.setAttribute("smem_id", mVO.getMem_id());
          session.setAttribute("smem_name", mVO.getMem_name());
+         session.setAttribute("s_cnt", mVO.getCount());
+
       }
       return "redirect:/auth/index.jsp";
    }
