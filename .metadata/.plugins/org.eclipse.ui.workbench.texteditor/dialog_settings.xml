@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="file"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="table"/>
+			<item value="login"/>
+			<item value="tb_id"/>
 			<item value="file"/>
 			<item value="_file"/>
 			<item value="javacript:rece"/>
@@ -20,9 +23,6 @@
 			<item value="우편번호 찾기"/>
 			<item value=".pj"/>
 			<item value="pj"/>
-			<item value="memberInser"/>
-			<item value="사용자가 입력한"/>
-			<item value=".sp4"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
@@ -32,7 +32,7 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="15"/>
-		<item key="DIALOG_Y_ORIGIN" value="-161"/>
+		<item key="DIALOG_Y_ORIGIN" value="-66"/>
 		<item key="DIALOG_WIDTH" value="393"/>
 		<item key="DIALOG_HEIGHT" value="523"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
