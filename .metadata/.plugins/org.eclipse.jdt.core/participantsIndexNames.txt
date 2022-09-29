@@ -51,5 +51,7 @@ C:\KH-SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1734771691.in
 \dev_spring4\src\main\java
 C:\KH-SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1337674594.index
 \demo0921\src\main\java
+C:\KH-SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\58420198.index
+\basic\src\main\java
 C:\KH-SPRING\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3531413901.index
 \basic\src\main\java
