@@ -10,6 +10,7 @@ public class AuthLogic {
 	// AuthLogic 클래스는 AuthDao클래스와 의존관계가 있다
 	@Autowired
 	private AuthDao authDao = null;
+	
 	public MemberVO login() {
 		//logger.info("login 호출 성공");
 		MemberVO mVO = null;
