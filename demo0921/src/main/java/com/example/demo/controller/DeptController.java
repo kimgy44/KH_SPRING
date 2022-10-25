@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.example.demo.logic.DeptLogic;
 import com.example.demo.vo.DeptVO;
 
-
+//@CrossOrigin(originPatterns ="http://localhost:3000")
 @Controller
 @RequestMapping("/dept/*")
 @SessionAttributes({"s_id","s_name"})

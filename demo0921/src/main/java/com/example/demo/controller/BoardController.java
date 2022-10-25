@@ -146,6 +146,7 @@ public class BoardController {
          }
       }
       result = boardLogic.boardInsert(pMap);
-      return "redirect:boardList";
+      //return "redirect:boardList";
+      return "redirect:http://localhost:3000/board"; // 리액트수업
    }   
 }

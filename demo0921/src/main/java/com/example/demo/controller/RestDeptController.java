@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.logic.DeptLogic;
 import com.google.gson.Gson;
 
+
 @RestController
 @RequestMapping("/dept/*")
 public class RestDeptController {
