@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="홍길동"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="홍길동"/>
-			<item value="mVO"/>
-			<item value="dlg_boardIns"/>
-			<item value="repleForm"/>
-			<item value="none"/>
-			<item value="form"/>
-			<item value="f_member"/>
-			<item value="memberin"/>
-			<item value="boardList"/>
-			<item value="search"/>
-			<item value="cb_search"/>
 			<item value="ojd"/>
-			<item value="hi"/>
-			<item value="startM"/>
-			<item value=".id"/>
+			<item value="data"/>
+			<item value="junit"/>
+			<item value="test"/>
+			<item value="servle"/>
+			<item value="jdbc"/>
+			<item value="core"/>
+			<item value="api"/>
+			<item value="servlet"/>
+			<item value="jsp"/>
+			<item value="mybatis-spring"/>
+			<item value="mybatis"/>
+			<item value="ojdbc"/>
+			<item value="spring-jdbc"/>
+			<item value="tx"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
@@ -31,7 +31,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="329"/>
+		<item key="DIALOG_X_ORIGIN" value="368"/>
 		<item key="DIALOG_Y_ORIGIN" value="497"/>
 		<item key="DIALOG_WIDTH" value="393"/>
 		<item key="DIALOG_HEIGHT" value="523"/>

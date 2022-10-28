@@ -19,5 +19,6 @@
 <aop-reference advice-type="AFTER" bean="1:BeansModel|2:dev_spring4|3:src/main/webapp/WEB-INF/spring-service.xml|7:beans:8|8:emp-logic:70" bean-file="/dev_spring4/src/main/webapp/WEB-INF/spring-service.xml" bean-start-line="70" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/dev_spring4/src/main/webapp/WEB-INF/spring-service.xml" source="=dev_spring4/src\/main\/java&lt;com.spring4.tr{AfterThrowingAdvice.java[AfterThrowingAdvice~exceptionMsg" source-start-line="5" target="=dev_spring4/src\/main\/java&lt;com.spring4.tr{EmpLogic.java[EmpLogic~cudEmp" target-start-line="22"/>
 </aspect-definition>
 </aop-project>
+<aop-project name="kh-security"/>
 <aop-project name="basic"/>
 </aop-reference-model>
